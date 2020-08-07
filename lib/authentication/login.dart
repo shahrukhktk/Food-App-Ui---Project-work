@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.all(20),
         children: <Widget>[
 
-          SizedBox(height: 70,),
+          SizedBox(height: 50,),
 
           Center(
             child: Text('LOGIN', style: TextStyle(
@@ -101,10 +101,10 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.all(20),
-                child: Image(image: AssetImage('images/logo.png'), height: 50,),
+                child: Image(image: AssetImage('images/logo.png'), height: 100,),
               )),
 
-          SizedBox(height: 50,),
+          SizedBox(height: 20,),
 
           Padding(
             padding: EdgeInsets.all(10.0),
