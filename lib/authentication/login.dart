@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
+import 'package:foodapp_ui/screens/order_confirmation.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -133,8 +134,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),),
                 onPressed: ()
                 {
-//                  Navigator.push(context,
-//                    MaterialPageRoute(builder: (context) => MainScreen()),);
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OrderConfirmation()),);
                 },
               ),
             ),

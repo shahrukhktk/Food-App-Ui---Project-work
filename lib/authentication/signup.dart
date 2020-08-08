@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp_ui/screens/order_confirmation.dart';
 
 import 'login.dart';
 
@@ -168,8 +169,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),),
                 onPressed: ()
                 {
-//                  Navigator.push(context,
-//                    MaterialPageRoute(builder: (context) => MainScreen()),);
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OrderConfirmation()),);
                 },
               ),
             ),
