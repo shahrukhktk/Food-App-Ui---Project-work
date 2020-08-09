@@ -101,7 +101,156 @@ class _ShopListState extends State<ShopList> {
             ),
           ),
 
-          
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: <Widget>[
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(100)
+                            ),
+                            child: Center(
+                              child: Icon(Icons.restaurant, color: Colors.white,),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text('Restaurants', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(100)
+                            ),
+                            child: Center(
+                              child: Image(image: AssetImage("images/store.png"), height: 25)
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text('Stores', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(100)
+                            ),
+                            child: Center(
+                              child: Image(image: AssetImage("images/pharmacy.png"), height: 25)
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text('Pharmacy', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(100)
+                            ),
+                            child: Center(
+                              child: Image(image: AssetImage("images/marketsicon.png"),height: 25)
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text('Markets', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 60,
+                          width: 60,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(100)
+                            ),
+                            child: Center(
+                              child: Image(image: AssetImage("images/hardwareicon.png"), height: 25,)
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Text('Hardware Store', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ],
+                    ),
+                  ),
+
+
+
+                ],
+              ),
+            ),
+          ),
+
+
 
         ],
       ),
