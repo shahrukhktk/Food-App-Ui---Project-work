@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp_ui/screens/listofshops.dart';
 
 import 'authentication/signup.dart';
 
@@ -9,5 +10,5 @@ void main() => runApp(new MaterialApp(
     fontFamily: "SFProDisplay",
   ),
   debugShowCheckedModeBanner: false,
-  home: SignUpScreen(),
+  home: ShopList(),
 ));
