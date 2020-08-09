@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
@@ -12,13 +13,74 @@ class _ShopListState extends State<ShopList> {
   @override
   Widget build(BuildContext context) {
 
+    Widget BarrilFusion()
+    {
+      return ListTile(
+        onTap: ()
+        {
+//          Navigator.push(context,
+//            MaterialPageRoute(builder: (context) => ProductDetailsScreen()),);
+        },
+        leading: Image(
+          image: AssetImage('images/barril.png'),
+        ),
+        title: Text('The Barril Fusion',
+          style: TextStyle(
+              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+          ),
+        ),
+        subtitle: Text('12pm - 7pm', style: TextStyle(
+            fontFamily: 'SFProDisplay', fontSize: 12.0
+        ),),
+        trailing: Text('Outstanding',
+          style: TextStyle(
+              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.amber
+          ),
+        ),
+      );
+    }
+
+    Widget ElManaDelivery()
+    {
+      return ListTile(
+        onTap: ()
+        {
+//          Navigator.push(context,
+//            MaterialPageRoute(builder: (context) => ProductDetailsScreen()),);
+        },
+        leading: Image(
+          image: AssetImage('images/elmana.png'),
+        ),
+        title: Text('El Mana - Delivery',
+          style: TextStyle(
+              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+          ),
+        ),
+        subtitle: Text('12pm - 7pm', style: TextStyle(
+            fontFamily: 'SFProDisplay', fontSize: 12.0
+        ),),
+        trailing: Text('Outstanding',
+          style: TextStyle(
+              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.amber
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[-100],
       body: ListView(
         padding: EdgeInsets.all(20),
         children: <Widget>[
 
-          SizedBox(height: 50,),
+//          Align(
+//              alignment: Alignment.center,
+//              child: Padding(
+//                padding: const EdgeInsets.all(20),
+//                child: Image(image: AssetImage('images/logo.png'), height: 100,),
+//              )),
+
+          SizedBox(height: 40,),
 
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -242,12 +304,118 @@ class _ShopListState extends State<ShopList> {
                       ],
                     ),
                   ),
-
-
-
                 ],
               ),
             ),
+          ),
+
+
+          Column(
+            children: <Widget>[
+              BarrilFusion(),
+              Padding(
+                padding: const EdgeInsets.only(left: 90, right: 15),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 90.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.star, color: Colors.red, size: 20,),
+                    Text('  5', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
+                    Text('  30 MINS', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
+                    Text('  S/5 Para dos', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          Column(
+            children: <Widget>[
+              ElManaDelivery(),
+              Padding(
+                padding: const EdgeInsets.only(left: 90, right: 15),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 90.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.star, color: Colors.red, size: 20,),
+                    Text('  5', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
+                    Text('  30 MINS', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
+                    Text('  S/5 Para dos', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          Column(
+            children: <Widget>[
+              BarrilFusion(),
+              Padding(
+                padding: const EdgeInsets.only(left: 90, right: 15),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 90.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.star, color: Colors.red, size: 20,),
+                    Text('  5', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
+                    Text('  30 MINS', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+                    SizedBox(width: 15,),
+                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
+                    Text('  S/5 Para dos', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0
+                    ),),
+
+                  ],
+                ),
+              ),
+            ],
           ),
 
 
