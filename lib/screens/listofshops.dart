@@ -18,8 +18,8 @@ class _ShopListState extends State<ShopList> {
       return ListTile(
         onTap: ()
         {
-//          Navigator.push(context,
-//            MaterialPageRoute(builder: (context) => ProductDetailsScreen()),);
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
         },
         leading: Image(
           image: AssetImage('images/barril.png'),
@@ -45,8 +45,8 @@ class _ShopListState extends State<ShopList> {
       return ListTile(
         onTap: ()
         {
-//          Navigator.push(context,
-//            MaterialPageRoute(builder: (context) => ProductDetailsScreen()),);
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
         },
         leading: Image(
           image: AssetImage('images/elmana.png'),
