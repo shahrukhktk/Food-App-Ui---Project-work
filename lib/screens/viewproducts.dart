@@ -65,6 +65,84 @@ class _ViewProductsState extends State<ViewProducts> {
       );
     }
 
+    Widget Menu1()
+    {
+      return ListTile(
+          onTap: ()
+          {
+            Navigator.push(context,
+              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+          },
+          leading: Image(
+            image: AssetImage('images/promo1.png'),
+          ),
+          title: Text('Menu 1',
+            style: TextStyle(
+                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+            ),
+          ),
+          subtitle: Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text('1/2 Maki a is... Show more\nS/ 15.00', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 12.0
+            ),),
+          ),
+          trailing: Icon(Icons.add)
+      );
+    }
+
+    Widget Menu2()
+    {
+      return ListTile(
+          onTap: ()
+          {
+            Navigator.push(context,
+              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+          },
+          leading: Image(
+            image: AssetImage('images/promo2.png'),
+          ),
+          title: Text('Menu 2',
+            style: TextStyle(
+                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+            ),
+          ),
+          subtitle: Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text('1/2 Maki a is... Show more\nS/ 20.00', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 12.0
+            ),),
+          ),
+          trailing: Icon(Icons.add)
+      );
+    }
+
+    Widget Package1()
+    {
+      return ListTile(
+          onTap: ()
+          {
+            Navigator.push(context,
+              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+          },
+          leading: Image(
+            image: AssetImage('images/promo2.png'),
+          ),
+          title: Text('Package 1',
+            style: TextStyle(
+                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+            ),
+          ),
+          subtitle: Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Text('30 pcs. by Acevichado30...\nShow more\nS/ 260.00', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 12.0
+            ),),
+          ),
+          trailing: Icon(Icons.add)
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[-100],
       body: ListView(
@@ -270,6 +348,7 @@ class _ViewProductsState extends State<ViewProducts> {
             ),
           ),
 
+          //Promotions List
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -454,6 +533,282 @@ class _ViewProductsState extends State<ViewProducts> {
             ],
           ),
 
+          SizedBox(height: 20,),
+
+          //Menu List
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
+                child: Text(
+                  'Menu', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+                ),
+                ),
+              ),
+              Icon(Icons.keyboard_arrow_up),
+            ],
+          ),
+
+          Column(
+            children: <Widget>[
+              Menu1(),
+              Padding(
+                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
+                child: Text('Customizable', style: TextStyle(
+                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
+                ),),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Recommended', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.orange
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Popular', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('New', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+
+            ],
+          ),
+
+          SizedBox(height: 10,),
+
+          Column(
+            children: <Widget>[
+              Menu2(),
+              Padding(
+                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
+                child: Text('Customizable', style: TextStyle(
+                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
+                ),),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Recommended', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.orange
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Popular', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('New', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+
+            ],
+          ),
+
+          SizedBox(height: 20,),
+
+          //[Package] List
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
+                child: Text(
+                  'Package', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+                ),
+                ),
+              ),
+              Icon(Icons.keyboard_arrow_up),
+            ],
+          ),
+
+          Column(
+            children: <Widget>[
+              Package1(),
+              Padding(
+                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
+                child: Text('Customizable', style: TextStyle(
+                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
+                ),),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Recommended', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.orange
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('Popular', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Card(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.blue
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Center(
+                            child: Text('New', style: TextStyle(
+                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
+                            ),),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
+                child: Divider(
+                  thickness: 1,
+                  height: 10,
+                  color: Colors.grey,
+                ),
+              ),
+
+            ],
+          ),
 
 
         ],
