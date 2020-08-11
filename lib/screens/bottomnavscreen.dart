@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/screens/listofshops.dart';
+import 'package:foodapp_ui/screens/viewproducts.dart';
 
 class MainScreen extends StatefulWidget
 {
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen>
 
     final List<Widget> _bottomNavChilds = [
       ShopList(),
-      ShopList(),
+      ViewProducts(),
       ShopList(),
       ShopList(),
       ShopList(),

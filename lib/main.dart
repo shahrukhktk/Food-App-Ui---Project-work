@@ -11,5 +11,5 @@ void main() => runApp(new MaterialApp(
     fontFamily: "SFProDisplay",
   ),
   debugShowCheckedModeBanner: false,
-  home: OrderConfirmation(),
+  home: MainScreen(),
 ));
