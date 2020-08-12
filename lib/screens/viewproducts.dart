@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
+import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
 class ViewProducts extends StatefulWidget {
   @override
@@ -271,8 +272,15 @@ class _ViewProductsState extends State<ViewProducts> {
                 ),
                 Stack(
                   children: <Widget>[
-                    Image(
-                      image: AssetImage("images/promotion2.png"),
+                    GestureDetector(
+                      onTap: ()
+                      {
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => ViewProductDetails()),);
+                      },
+                      child: Image(
+                        image: AssetImage("images/promotion2.png"),
+                      ),
                     ),
                     Positioned(
                       bottom: 18,
@@ -809,7 +817,6 @@ class _ViewProductsState extends State<ViewProducts> {
 
             ],
           ),
-
 
         ],
       ),
