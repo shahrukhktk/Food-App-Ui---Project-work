@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:foodapp_ui/screens/listofshops.dart';
 import 'package:foodapp_ui/screens/viewproducts.dart';
 
+import 'CartScreens/empty_cart.dart';
+
 class MainScreen extends StatefulWidget
 {
   @override
@@ -22,7 +24,7 @@ class _MainScreenState extends State<MainScreen>
       ShopList(),
       ViewProducts(),
       ShopList(),
-      ShopList(),
+      EmptyCart(),
       ShopList(),
     ];
 
