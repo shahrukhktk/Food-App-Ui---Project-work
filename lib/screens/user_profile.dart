@@ -44,7 +44,7 @@ class _UserProfileState extends State<UserProfile> {
 
           SizedBox(height: 20,),
 
-          //Promotions List
+          //My Account Portion
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,8 +73,82 @@ class _UserProfileState extends State<UserProfile> {
             ),
             ),
             trailing: Icon(Icons.chevron_right),
-
           ),
+
+          Divider(
+            height: 1, thickness: 1, color: Colors.grey,
+          ),
+
+          ListTile(
+            leading: Icon(Icons.shopping_cart),
+            title: Text(
+              'My Orders', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.grey, letterSpacing: 0.5
+            ),
+            ),
+            trailing: Icon(Icons.chevron_right),
+          ),
+
+          Divider(
+            height: 1, thickness: 1, color: Colors.grey,
+          ),
+
+          ListTile(
+            leading: Icon(Icons.account_balance_wallet),
+            title: Text(
+              'Wallet', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.grey, letterSpacing: 0.5
+            ),
+            ),
+            trailing: Icon(Icons.chevron_right),
+          ),
+
+          Divider(
+            height: 1, thickness: 1, color: Colors.grey,
+          ),
+
+          SizedBox(height: 20,),
+
+          //Help & FAQ Portion
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0, left: 08.0, bottom: 10.0),
+                child: Text(
+                  'Help and FAQ', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+                ),
+                ),
+              ),
+              Icon(Icons.keyboard_arrow_down),
+            ],
+          ),
+
+          Divider(
+            height: 1, thickness: 1, color: Colors.grey,
+          ),
+
+          SizedBox(height: 10,),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Sign Off', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.red, letterSpacing: 0.5
+                ),
+                ),
+
+                Icon(Icons.power_settings_new, color: Colors.red,),
+
+              ],
+            ),
+          )
           
         ],
       ),
