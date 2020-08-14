@@ -1,6 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/screens/listofshops.dart';
+import 'package:foodapp_ui/screens/order_confirmation.dart';
+import 'package:foodapp_ui/screens/user_profile.dart';
 import 'package:foodapp_ui/screens/viewproducts.dart';
 
 import 'CartScreens/empty_cart.dart';
@@ -21,11 +23,11 @@ class _MainScreenState extends State<MainScreen>
   Widget build(BuildContext context) {
 
     final List<Widget> _bottomNavChilds = [
-      ShopList(),
+      OrderConfirmation(),
       ViewProducts(),
       ShopList(),
       EmptyCart(),
-      ShopList(),
+      UserProfile(),
     ];
 
     //BottomNavigationBar
