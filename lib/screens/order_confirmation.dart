@@ -3,6 +3,7 @@ import 'package:foodapp_ui/screens/bottomnavscreen.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'map.dart';
+import 'CartScreens/order_cart.dart';
 
 class OrderConfirmation extends StatefulWidget {
   @override
@@ -75,7 +76,7 @@ class _OrderConfirmationState extends State<OrderConfirmation> {
                             onPressed: ()
                             {
                               Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => MainScreen()),);
+                                MaterialPageRoute(builder: (context) => OrderCart()),);
                             },
                           ),
                         ),
