@@ -4,6 +4,8 @@ import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
+import 'cart_payment.dart';
+
 class OrderCart extends StatefulWidget {
   @override
   _OrderCartsState createState() => _OrderCartsState();
@@ -39,138 +41,8 @@ class _OrderCartsState extends State<OrderCart> {
       );
     }
 
-    Widget Promotion1()
-    {
-      return ListTile(
-        onTap: ()
-        {
-          Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-        },
-        leading: Image(
-          image: AssetImage('images/promo1.png'),
-        ),
-        title: Text('Promotion 1',
-          style: TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-          ),
-        ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Text('05 Cortes de... Show more\nS/ 55.00', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 12.0
-          ),),
-        ),
-        trailing: Icon(Icons.add)
-      );
-    }
-
-    Widget Promotion2()
-    {
-      return ListTile(
-        onTap: ()
-        {
-          Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-        },
-        leading: Image(
-          image: AssetImage('images/promo2.png'),
-        ),
-        title: Text('Promotion 2',
-          style: TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-          ),
-        ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Text('10 Cortes de... Show more\nS/ 155.00', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 12.0
-          ),),
-        ),
-        trailing: Icon(Icons.add)
-      );
-    }
-
-    Widget Menu1()
-    {
-      return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo1.png'),
-          ),
-          title: Text('Menu 1',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('1/2 Maki a is... Show more\nS/ 15.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
-      );
-    }
-
-    Widget Menu2()
-    {
-      return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo2.png'),
-          ),
-          title: Text('Menu 2',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('1/2 Maki a is... Show more\nS/ 20.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
-      );
-    }
-
-    Widget Package1()
-    {
-      return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo2.png'),
-          ),
-          title: Text('Package 1',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('30 pcs. by Acevichado30...\nShow more\nS/ 260.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
-      );
-    }
-
     return Scaffold(
-      backgroundColor: Colors.grey[-100],
+      backgroundColor: Colors.white,
       body: ListView(
         padding: EdgeInsets.all(20),
         children: <Widget>[
@@ -550,7 +422,7 @@ class _OrderCartsState extends State<OrderCart> {
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => OrderCart()),);
+                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
                   },
                 ),
               ),

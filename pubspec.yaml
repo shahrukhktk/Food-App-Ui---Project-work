@@ -61,6 +61,8 @@ flutter:
     - images/promo2.png
     - images/product_view.png
     - images/emptycart.png
+    - images/cash.png
+    - images/stripe.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
