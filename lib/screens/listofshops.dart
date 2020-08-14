@@ -306,24 +306,31 @@ class _ShopListState extends State<ShopList> {
           ),
 
           //Complete ViewHolder
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SizedBox(
-              height: 120,
-              width: 200,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black26
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Image(
-                        image: AssetImage('images/barril.png'), height: 70,
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 120,
+                width: 200,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black26
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Image(
+                          image: AssetImage('images/barril.png'), height: 70,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -494,7 +501,7 @@ class _ShopListState extends State<ShopList> {
               ],
             ),
           ),
-          
+
         ],
       ),
     );
