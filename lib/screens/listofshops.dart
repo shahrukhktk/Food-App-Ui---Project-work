@@ -73,15 +73,9 @@ class _ShopListState extends State<ShopList> {
         padding: EdgeInsets.all(20),
         children: <Widget>[
 
-//          Align(
-//              alignment: Alignment.center,
-//              child: Padding(
-//                padding: const EdgeInsets.all(20),
-//                child: Image(image: AssetImage('images/logo.png'), height: 100,),
-//              )),
-
           SizedBox(height: 40,),
 
+          //scrollable banners
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
@@ -97,6 +91,7 @@ class _ShopListState extends State<ShopList> {
             ),
           ),
 
+          //tab bar
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
@@ -163,6 +158,7 @@ class _ShopListState extends State<ShopList> {
             ),
           ),
 
+          //scrollable shops
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
@@ -309,117 +305,196 @@ class _ShopListState extends State<ShopList> {
             ),
           ),
 
-
-          Column(
-            children: <Widget>[
-              BarrilFusion(),
-              Padding(
-                padding: const EdgeInsets.only(left: 90, right: 15),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
+          //Complete ViewHolder
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: SizedBox(
+              height: 120,
+              width: 200,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black26
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 90.0),
                 child: Row(
                   children: <Widget>[
-                    Icon(Icons.star, color: Colors.red, size: 20,),
-                    Text('  5', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
-                    Text('  30 MINS', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
-                    Text('  S/5 Para dos', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image(
+                        image: AssetImage('images/barril.png'), height: 70,
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ],
+            ),
           ),
 
-          Column(
-            children: <Widget>[
-              ElManaDelivery(),
-              Padding(
-                padding: const EdgeInsets.only(left: 90, right: 15),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('The Barril Fusion', style: TextStyle(
+                  fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
+                ),),
+
+                Text('12pm - 7pm', style: TextStyle(
+                  fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                ),),
+
+              ],
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+
+                      Icon(Icons.access_time),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text('30 MINS', style: TextStyle(
+                          fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                        ),),
+                      ),
+
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 90.0),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+
+                      Icon(Icons.star, color: Colors.red,),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text('5.0', style: TextStyle(
+                          fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                        ),),
+                      ),
+
+                    ],
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+
+          SizedBox(height: 10,),
+
+          //Complete ViewHolder
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: SizedBox(
+              height: 120,
+              width: 200,
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.black26
+                ),
                 child: Row(
                   children: <Widget>[
-                    Icon(Icons.star, color: Colors.red, size: 20,),
-                    Text('  5', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
-                    Text('  30 MINS', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
-                    Text('  S/5 Para dos', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image(
+                        image: AssetImage('images/elmana.png'), height: 70,
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ],
+            ),
           ),
 
-          Column(
-            children: <Widget>[
-              BarrilFusion(),
-              Padding(
-                padding: const EdgeInsets.only(left: 90, right: 15),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 90.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.star, color: Colors.red, size: 20,),
-                    Text('  5', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.access_time, color: Colors.grey, size: 20,),
-                    Text('  30 MINS', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
-                    SizedBox(width: 15,),
-                    Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
-                    Text('  S/5 Para dos', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 12.0
-                    ),),
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('El Mana - Delivery', style: TextStyle(
+                  fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
+                ),),
 
-                  ],
-                ),
-              ),
-            ],
+                Text('12pm - 7pm', style: TextStyle(
+                  fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                ),),
+
+              ],
+            ),
           ),
 
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+
+                      Icon(Icons.access_time),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text('30 MINS', style: TextStyle(
+                          fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                        ),),
+                      ),
+
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+
+                      Icon(Icons.star, color: Colors.red,),
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text('5.0', style: TextStyle(
+                          fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                        ),),
+                      ),
+
+                    ],
+                  ),
+                ),
 
 
+              ],
+            ),
+          ),
+          
         ],
       ),
     );
