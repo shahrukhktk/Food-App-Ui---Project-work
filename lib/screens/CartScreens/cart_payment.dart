@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'order_cancellation.dart';
+
 class CartPaymentScreen extends StatefulWidget {
   @override
   _CartPaymentScreenState createState() => _CartPaymentScreenState();
@@ -83,49 +85,56 @@ class _CartPaymentScreenState extends State<CartPaymentScreen> {
           SizedBox(height: 15,),
 
           //Cash Card
-          SizedBox(
-            height: 100,
-            width: 200,
-            child: Card(
-              elevation: 2,
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white30
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
+          GestureDetector(
+            onTap: ()
+            {
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => OrderCancellation()),);
+            },
+            child: SizedBox(
+              height: 100,
+              width: 200,
+              child: Card(
+                elevation: 2,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white30
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
 
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'Cash', style: TextStyle(
-                            fontFamily: 'SFProDisplay', fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black,
-                          ),),
-
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: Text(
-                              'To the office', style: TextStyle(
-                              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.grey,
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'Cash', style: TextStyle(
+                              fontFamily: 'SFProDisplay', fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black,
                             ),),
-                          ),
-                        ],
-                      ),
-                    ),
 
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Image(
-                        image: AssetImage('images/cash.png'), height: 35,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text(
+                                'To the office', style: TextStyle(
+                                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.grey,
+                              ),),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
 
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Image(
+                          image: AssetImage('images/cash.png'), height: 35,
+                        ),
+                      ),
+
+                    ],
+                  ),
                 ),
               ),
             ),
