@@ -19,28 +19,61 @@ class _UserProfileState extends State<UserProfile> {
 
           SizedBox(height: 30,),
 
-          Text(
-            'TROLLEY', style: TextStyle(
-            fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
-          ),),
-
-          SizedBox(height: 40,),
-
           Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Image(
-              image: AssetImage('images/emptycart.png'),
-            )
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Fawad Ahmed Malik', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 22.0, fontWeight: FontWeight.bold, color: Colors.black, letterSpacing: 1.5
+            ),),
           ),
 
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Your cart is empty', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.w500, color: Colors.black,
-              ),
-              textAlign: TextAlign.center,
+              '+51234569872 . malikfawad003@gmail.com', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey, letterSpacing: 1.0
+            ),),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Divider(
+              height: 10, thickness: 2, color: Colors.black,
             ),
+          ),
+
+          SizedBox(height: 20,),
+
+          //Promotions List
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0, left: 08.0, bottom: 10.0),
+                child: Text(
+                  'My account', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+                ),
+                ),
+              ),
+              Icon(Icons.keyboard_arrow_up),
+            ],
+          ),
+
+          Divider(
+            height: 1, thickness: 1, color: Colors.grey,
+          ),
+
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text(
+              'Manage address', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.grey, letterSpacing: 0.5
+            ),
+            ),
+            trailing: Icon(Icons.chevron_right),
+
           ),
           
         ],

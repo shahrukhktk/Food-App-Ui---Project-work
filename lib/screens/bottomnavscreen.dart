@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen>
 
     //BottomNavigationBar
     CurvedNavigationBar bottomNav = new CurvedNavigationBar(key: _bottomNavigationKey,
-      index: 0,
+      index: 2,
       height: 50.0,
       items: <Widget>[
         Icon(Icons.location_on, size: 30, color: Colors.white,),
