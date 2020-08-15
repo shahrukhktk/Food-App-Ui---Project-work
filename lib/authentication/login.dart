@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/bottomnavscreen.dart';
+import 'package:foodapp_ui/screens/listofshops.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -136,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: ()
                 {
                   Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MainScreen()),);
+                    MaterialPageRoute(builder: (context) => ShopList()),);
                 },
               ),
             ),

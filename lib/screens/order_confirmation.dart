@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/screens/bottomnavscreen.dart';
+import 'package:foodapp_ui/screens/listofshops.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'map.dart';
@@ -27,7 +28,7 @@ class _OrderConfirmationState extends State<OrderConfirmation> {
             bottom: 0,
             child: SizedBox(
               height: 250,
-              width: 370,
+              width: 400,
               child: Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -76,7 +77,7 @@ class _OrderConfirmationState extends State<OrderConfirmation> {
                             onPressed: ()
                             {
                               Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => OrderCart()),);
+                                MaterialPageRoute(builder: (context) => ShopList()),);
                             },
                           ),
                         ),
