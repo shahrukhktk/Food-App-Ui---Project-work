@@ -25,7 +25,11 @@ class _CartPaymentScreenState extends State<CartPaymentScreen> {
             children: <Widget>[
               Align(
                   alignment: Alignment.topLeft,
-                  child: Icon(Icons.chevron_left, size: 30,),
+                  child: GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.chevron_left, size: 30,)),
               ),
 
               Text(

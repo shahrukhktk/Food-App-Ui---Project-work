@@ -23,7 +23,11 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
 
           Align(
               alignment: Alignment.topLeft,
-              child: Icon(Icons.chevron_left, size: 30,),
+              child: GestureDetector(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.chevron_left, size: 30,)),
           ),
 
           SizedBox(height: 20,),

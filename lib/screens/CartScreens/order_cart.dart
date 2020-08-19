@@ -54,7 +54,11 @@ class _OrderCartsState extends State<OrderCart> {
             children: <Widget>[
               Align(
                 alignment: Alignment.topLeft,
-                child: Icon(Icons.chevron_left, size: 30,),
+                child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.chevron_left, size: 30,)),
               ),
 
               Text(

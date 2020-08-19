@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
+import 'package:foodapp_ui/screens/CartScreens/order_cart.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
@@ -14,363 +15,233 @@ class _ViewProductsState extends State<ViewProducts> {
   @override
   Widget build(BuildContext context) {
 
-    Widget Promotion1()
+    Widget PokeSalmon()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+            MaterialPageRoute(builder: (context) => OrderCart()),);
         },
-        leading: Image(
-          image: AssetImage('images/promo1.png'),
-        ),
-        title: Text('Promotion 1',
+        title: Text('Poke Salmon',
           style: TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+              fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('05 Cortes de... Show more\nS/ 55.00', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 12.0
+          child: Text('Salmon, suja duice, aguacate, pepino, edamame, zanahoria, alga wakame, ce...', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
-        trailing: Icon(Icons.add)
+        trailing: Image(
+            image: AssetImage('images/promo1.png'),),
       );
     }
 
-    Widget Promotion2()
+    Widget PokePulpo()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
+            MaterialPageRoute(builder: (context) => OrderCart()),);
         },
-        leading: Image(
-          image: AssetImage('images/promo2.png'),
-        ),
-        title: Text('Promotion 2',
+        title: Text('Poke pulpo, salmon mostaza',
           style: TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
+              fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('10 Cortes de... Show more\nS/ 155.00', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 12.0
+          child: Text('Salmon, pulpo, majo mostaza, agucate, edamame, alga wakame, pepino, pina, ...', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
-        trailing: Icon(Icons.add)
+        trailing: Image(
+          image: AssetImage('images/promo2.png'),),
       );
     }
 
-    Widget Menu1()
+    Widget PokePez()
     {
       return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo1.png'),
+        onTap: ()
+        {
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => OrderCart()),);
+        },
+        title: Text('Poke pez mantequilla',
+          style: TextStyle(
+              fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
-          title: Text('Menu 1',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('1/2 Maki a is... Show more\nS/ 15.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
+        ),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text('Pez mantequilla trufado, soja, aguacate, edamame, algas wakame, pepino, zan...', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 13.0
+          ),),
+        ),
+        trailing: Image(
+          image: AssetImage('images/promo1.png'),),
       );
     }
 
-    Widget Menu2()
+    Widget Pokeatun()
     {
       return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo2.png'),
+        onTap: ()
+        {
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => OrderCart()),);
+        },
+        title: Text('Poke atun',
+          style: TextStyle(
+              fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
-          title: Text('Menu 2',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('1/2 Maki a is... Show more\nS/ 20.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
+        ),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text('Atun, salsa kimuchi picante, agucate, edamame, alga wakame, pepino, ceboi...', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 13.0
+          ),),
+        ),
+        trailing: Image(
+          image: AssetImage('images/promo2.png'),),
       );
     }
 
-    Widget Package1()
+    Widget Pokegambus()
     {
       return ListTile(
-          onTap: ()
-          {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-          },
-          leading: Image(
-            image: AssetImage('images/promo2.png'),
+        onTap: ()
+        {
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => OrderCart()),);
+        },
+        title: Text('Poke gambas, huevo duro',
+          style: TextStyle(
+              fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
-          title: Text('Package 1',
-            style: TextStyle(
-                fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-            ),
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Text('30 pcs. by Acevichado30...\nShow more\nS/ 260.00', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 12.0
-            ),),
-          ),
-          trailing: Icon(Icons.add)
+        ),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text('Gambas, heuvo duro, salsa cremosa, aguacate, edamame, pina, pepino, zan...', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 13.0
+          ),),
+        ),
+        trailing: Image(
+          image: AssetImage('images/promo1.png'),),
       );
     }
 
     return Scaffold(
       backgroundColor: Colors.grey[-100],
       body: ListView(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(0),
         children: <Widget>[
 
-          SizedBox(height: 30,),
-
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Stack(
             children: <Widget>[
-              Icon(Icons.chevron_left, size: 30,),
-              Padding(
-                padding: const EdgeInsets.only(left: 12.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              Image(image: AssetImage('images/pokesalad.png'), fit: BoxFit.cover,),
+              Positioned(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Ohashi - Lince', style: TextStyle(
-                      fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.normal, color: Colors.black,
-                    ),
-                    ),
+                    Icon(Icons.chevron_left, size: 30, color: Colors.white,),
                     Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Text(
-                        '30 MINS', style: TextStyle(
-                        fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
-                      ),
-                      ),
+                      padding: const EdgeInsets.only(left: 12.0),
+                      child: Text('Crudo - Pokes & Salads', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white,
+                      ),),
                     ),
-
                   ],
                 ),
-              )
+                bottom: 10,
+              ),
             ],
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              'RECOMMENDED', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
-            ),
-            ),
-          ),
+          SizedBox(height: 30,),
 
+          SizedBox(height: 10,),
+
+          //tab bar
           SingleChildScrollView(
-            padding: EdgeInsets.all(8),
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage("images/promotion1.png"),
-                    ),
-                    Positioned(
-                      bottom: 18,
-                      left: 20,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: SizedBox(
+                      height: 40,
+                      width: 100,
                       child: Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Promotion 1', style: TextStyle(
-                              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 1
-                            ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10.0),
-                              child: Row(
-                                children: <Widget>[
-                                  Text(
-                                    'S/ 55.00  ', style: TextStyle(
-                                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.grey, letterSpacing: 1
-                                  ),
-                                  ),
-                                  Text(
-                                    'Personalizable', style: TextStyle(
-                                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.orange, letterSpacing: 1
-                                  ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10.0),
-                              child: Row(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 30,
-                                    width: 70,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: Color.fromARGB(255, 241, 241, 241)
-                                      ),
-                                      child: Center(
-                                        child: Icon(Icons.remove,),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(width: 10,),
-                                  SizedBox(
-                                    height: 30,
-                                    width: 70,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.white
-                                      ),
-                                      child: Center(
-                                        child: Icon(Icons.add,),
-                                      ),
-                                    ),
-                                  ),
-
-                                ],
-                              ),
-                            ),
-
-                          ],
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: Center(
+                          child: Text('Entrantes', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.white,
+                          ),),
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Stack(
-                  children: <Widget>[
-                    GestureDetector(
-                      onTap: ()
-                      {
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ViewProductDetails()),);
-                      },
-                      child: Image(
-                        image: AssetImage("images/promotion2.png"),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 18,
-                      left: 20,
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: SizedBox(
+                      height: 40,
+                      width: 100,
                       child: Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Promotion 2', style: TextStyle(
-                                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 1
-                            ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10.0),
-                              child: Row(
-                                children: <Widget>[
-                                  Text(
-                                    'S/ 115.00  ', style: TextStyle(
-                                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.grey, letterSpacing: 1
-                                  ),
-                                  ),
-                                  Text(
-                                    'Personalizable', style: TextStyle(
-                                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.orange, letterSpacing: 1
-                                  ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10.0),
-                              child: Row(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 30,
-                                    width: 70,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Color.fromARGB(255, 241, 241, 241)
-                                      ),
-                                      child: Center(
-                                        child: Icon(Icons.remove,),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(width: 10,),
-                                  SizedBox(
-                                    height: 30,
-                                    width: 70,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.white
-                                      ),
-                                      child: Center(
-                                        child: Icon(Icons.add,),
-                                      ),
-                                    ),
-                                  ),
-
-                                ],
-                              ),
-                            ),
-
-                          ],
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 225, 225, 225),
+                            borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: Center(
+                          child: Text('Pokes', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: SizedBox(
+                      height: 40,
+                      width: 120,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 225, 225, 225),
+                            borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: Center(
+                          child: Text('Crea tu poke bowl', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          ),),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
 
           //Promotions List
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
-                child: Text(
-                  'Promotions', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
-                ),
-                ),
-              ),
-              Icon(Icons.keyboard_arrow_up),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
+            child: Text(
+              'Pokes', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+            ),
+            ),
           ),
 
           Padding(
@@ -381,442 +252,211 @@ class _ViewProductsState extends State<ViewProducts> {
             ),
           ),
 
+          //Poke Salmon
           Column(
             children: <Widget>[
-              Promotion1(),
+              PokeSalmon(),
               Padding(
-                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
-                child: Text('Customizable', style: TextStyle(
-                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
-                ),),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.red
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Recommended', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
 
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.orange
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Popular', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
 
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('New', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Popular', style: TextStyle(
+                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
+                      ),),
                     ),
 
                   ],
                 ),
               ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
-                ),
-              ),
-
             ],
           ),
 
           SizedBox(height: 10,),
 
+          //Poke pulpo, salmon mostaza
           Column(
             children: <Widget>[
-              Promotion2(),
+              PokePulpo(),
               Padding(
-                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
-                child: Text('Customizable', style: TextStyle(
-                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
-                ),),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.red
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Recommended', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
 
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.orange
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Popular', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('New', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
 
                   ],
                 ),
               ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
-                ),
-              ),
-
-            ],
-          ),
-
-          SizedBox(height: 20,),
-
-          //Menu List
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
-                child: Text(
-                  'Menu', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
-                ),
-                ),
-              ),
-              Icon(Icons.keyboard_arrow_up),
-            ],
-          ),
-
-          Column(
-            children: <Widget>[
-              Menu1(),
-              Padding(
-                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
-                child: Text('Customizable', style: TextStyle(
-                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
-                ),),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.red
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Recommended', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.orange
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Popular', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('New', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
-                ),
-              ),
-
             ],
           ),
 
           SizedBox(height: 10,),
 
+          //Poke pez
           Column(
             children: <Widget>[
-              Menu2(),
+              PokePez(),
               Padding(
-                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
-                child: Text('Customizable', style: TextStyle(
-                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
-                ),),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.red
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Recommended', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
 
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.orange
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Popular', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
 
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('New', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 10,),
+
+          //Pokeatun
+          Column(
+            children: <Widget>[
+              Pokeatun(),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Popular', style: TextStyle(
+                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
+                      ),),
                     ),
 
                   ],
                 ),
               ),
+            ],
+          ),
 
+          SizedBox(height: 10,),
+
+          //Pokegambus
+          Column(
+            children: <Widget>[
+              Pokegambus(),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
+
+                  ],
                 ),
               ),
+            ],
+          ),
 
+          SizedBox(height: 10,),
+          //Poke pez
+          Column(
+            children: <Widget>[
+              PokePez(),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 10,),
+
+          //Pokeatun
+          Column(
+            children: <Widget>[
+              Pokeatun(),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text('Popular', style: TextStyle(
+                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
+                      ),),
+                    ),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 10,),
+
+          //Pokegambus
+          Column(
+            children: <Widget>[
+              Pokegambus(),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text("‎€11.70", style: TextStyle(
+                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
+                    ),),
+
+                  ],
+                ),
+              ),
             ],
           ),
 
           SizedBox(height: 20,),
 
-          //[Package] List
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
-                child: Text(
-                  'Package', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
-                ),
-                ),
-              ),
-              Icon(Icons.keyboard_arrow_up),
-            ],
-          ),
 
-          Column(
-            children: <Widget>[
-              Package1(),
-              Padding(
-                padding: const EdgeInsets.only(left: 0, right: 15, top: 10),
-                child: Text('Customizable', style: TextStyle(
-                    fontSize: 14.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.deepOrange
-                ),),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 110, right: 15, top: 10),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.red
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Recommended', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.orange
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('Popular', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Card(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Center(
-                            child: Text('New', style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                            ),),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 15, top: 10),
-                child: Divider(
-                  thickness: 1,
-                  height: 10,
-                  color: Colors.grey,
-                ),
-              ),
-
-            ],
-          ),
 
         ],
       ),
