@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/login.dart';
+import 'package:foodapp_ui/screens/CartScreens/order_cart.dart';
 import 'package:foodapp_ui/screens/viewproducts.dart';
 
 
@@ -12,5 +13,5 @@ void main() => runApp(new MaterialApp(
     fontFamily: "SFProDisplay",
   ),
   debugShowCheckedModeBanner: false,
-  home: ViewProducts(),
+  home: OrderCart(),
 ));

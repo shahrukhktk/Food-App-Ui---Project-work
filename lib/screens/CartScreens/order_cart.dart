@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
+import 'package:foodapp_ui/screens/Constants/constant.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
@@ -16,31 +17,6 @@ class _OrderCartsState extends State<OrderCart> {
   @override
   Widget build(BuildContext context) {
 
-    Widget ElManaDelivery()
-    {
-      return ListTile(
-        onTap: ()
-        {
-          Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-        },
-        leading: Image(
-          image: AssetImage('images/elmana.png'),
-        ),
-        title: Text('El Mana - Delivery',
-          style: TextStyle(
-              fontSize: 16.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', letterSpacing: 1.5
-          ),
-        ),
-        subtitle: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Text('El Mana - Order Table', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 14.0
-          ),),
-        ),
-      );
-    }
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
@@ -51,6 +27,7 @@ class _OrderCartsState extends State<OrderCart> {
 
           //top title bar
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Align(
                 alignment: Alignment.topLeft,
@@ -58,44 +35,37 @@ class _OrderCartsState extends State<OrderCart> {
                     onTap: (){
                       Navigator.pop(context);
                     },
-                    child: Icon(Icons.chevron_left, size: 30,)),
+                    child: Icon(Icons.keyboard_backspace, size: 30, color: AppColors.themeColor)),
               ),
 
-              Text(
-                'TROLLEY', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
-              ),),
+              Padding(
+                padding: const EdgeInsets.only(right: 200.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'My Basket', style: TextStyle(
+                      fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
+                    ),),
+
+                    Text(
+                      'Entrepanes', style: TextStyle(
+                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                    ),),
+                  ],
+                ),
+              ),
+
+              Align(
+                alignment: Alignment.topRight,
+                child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.delete, size: 30, color: AppColors.themeColor)),
+              ),
 
             ],
-          ),
-
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.grey[-200]
-            ),
-              child: ElManaDelivery(),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.only(left: 90.0, top: 0.0),
-            child: Row(
-              children: <Widget>[
-                Icon(Icons.star, color: Colors.red, size: 20,),
-                Text('  5', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 12.0
-                ),),
-                SizedBox(width: 15,),
-                Icon(Icons.access_time, color: Colors.grey, size: 20,),
-                Text('  30 MINS', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 12.0
-                ),),
-                SizedBox(width: 15,),
-                Icon(Icons.account_balance_wallet, color: Colors.grey, size: 20,),
-                Text('  S/5 Para dos', style: TextStyle(
-                    fontFamily: 'SFProDisplay', fontSize: 12.0
-                ),),
-              ],
-            ),
           ),
 
           //Products In Cart
