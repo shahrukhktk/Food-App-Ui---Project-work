@@ -20,53 +20,64 @@ class _OrderCartsState extends State<OrderCart> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(0),
         children: <Widget>[
 
-          SizedBox(height: 30,),
+          SizedBox(height: 40,),
 
           //top title bar
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Align(
-                alignment: Alignment.topLeft,
-                child: GestureDetector(
-                    onTap: (){
-                      Navigator.pop(context);
-                    },
-                    child: Icon(Icons.keyboard_backspace, size: 30, color: AppColors.themeColor)),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.only(right: 200.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'My Basket', style: TextStyle(
-                      fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
-                    ),),
-
-                    Text(
-                      'Entrepanes', style: TextStyle(
-                      fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.grey,
-                    ),),
-                  ],
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.keyboard_backspace, size: 30, color: AppColors.themeColor)),
                 ),
-              ),
 
-              Align(
-                alignment: Alignment.topRight,
-                child: GestureDetector(
-                    onTap: (){
-                      Navigator.pop(context);
-                    },
-                    child: Icon(Icons.delete, size: 30, color: AppColors.themeColor)),
-              ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 200.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'My Basket', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.black,
+                      ),),
 
-            ],
+                      Text(
+                        'Entrepanes', style: TextStyle(
+                        fontFamily: 'SFProDisplay', fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                      ),),
+                    ],
+                  ),
+                ),
+
+                Align(
+                  alignment: Alignment.topRight,
+                  child: GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.delete, size: 30, color: AppColors.themeColor)),
+                ),
+
+              ],
+            ),
           ),
+
+          Divider(
+            thickness: 0.5,
+            height: 10,
+            color: Colors.grey,
+          ),
+
+          
 
           //Products In Cart
           Padding(
