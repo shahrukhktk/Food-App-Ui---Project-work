@@ -21,7 +21,7 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
 
           Stack(
             children: <Widget>[
-              Image(image: AssetImage('images/entrepanes.png'), fit: BoxFit.cover,),
+              Image(image: AssetImage('images/ensalada_header.png'), fit: BoxFit.cover,),
               Positioned(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 5),
@@ -39,7 +39,7 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
                     ],
                   ),
                 ),
-                bottom: 60,
+                bottom: 80,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 310.0, top: 90),
