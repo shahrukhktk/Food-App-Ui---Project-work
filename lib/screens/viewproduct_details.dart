@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp_ui/screens/CartScreens/order_cart.dart';
 
 import 'CartScreens/cart_payment.dart';
 import 'Constants/constant.dart';
@@ -135,7 +136,7 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
+                      MaterialPageRoute(builder: (context) => OrderCart()),);
                   },
                 ),
               ),

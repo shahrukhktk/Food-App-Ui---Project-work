@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
+import 'package:foodapp_ui/screens/viewproducts.dart';
 
 import 'Constants/constant.dart';
 import 'ViewRestaurant.dart';
@@ -265,14 +266,19 @@ class _ShopListState extends State<ShopList> {
           SizedBox(height: 10,),
 
           //Rawcoco start
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Stack(
-              children: <Widget>[
-                Image(image: AssetImage('images/rawcoco.png'),),
-                Positioned(
-                  child: Column(
-                    children: <Widget>[
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ViewProducts()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Stack(
+                children: <Widget>[
+                  Image(image: AssetImage('images/rawcoco.png'),),
+                  Positioned(
+                    child: Column(
+                      children: <Widget>[
 //                      Padding(
 //                        padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 230),
 //                        child: SizedBox(
@@ -292,40 +298,41 @@ class _ShopListState extends State<ShopList> {
 //                        ),
 //                      ),
 
-                      Padding(
-                        padding: const EdgeInsets.only(left: 160.0, top: 80.0, right: 20),
-                        child: SizedBox(
-                          height: 60,
-                          width: 200,
-                          child: Card(
-                            elevation: 1.5,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Text('Pre-order', style: TextStyle(
-                                    fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
-                                  ),),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 160.0, top: 80.0, right: 20),
+                          child: SizedBox(
+                            height: 60,
+                            width: 200,
+                            child: Card(
+                              elevation: 1.5,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text('Pre-order', style: TextStyle(
+                                      fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                                    ),),
 
-                                  Text('09:15 - 09:45', style: TextStyle(
-                                    fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
-                                  ),),
+                                    Text('09:15 - 09:45', style: TextStyle(
+                                      fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
+                                    ),),
 
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
 
-                    ],
-                  ),
-                )
-              ],
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
 

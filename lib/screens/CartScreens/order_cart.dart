@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/custom_widgets/custom_switch_btn.dart';
 import 'package:foodapp_ui/screens/Constants/constant.dart';
+import 'package:foodapp_ui/screens/listofshops.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
@@ -372,7 +373,9 @@ class _OrderCartsState extends State<OrderCart> {
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
+                      MaterialPageRoute(builder: (context) => ShopList()),);
+//                    Navigator.push(context,
+//                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
                   },
                 ),
               ),
