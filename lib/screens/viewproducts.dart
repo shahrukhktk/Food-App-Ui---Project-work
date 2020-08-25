@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/CartScreens/order_cart.dart';
+import 'package:foodapp_ui/screens/Constants/constant.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 import 'package:foodapp_ui/screens/viewproduct_details.dart';
 
@@ -15,155 +16,158 @@ class _ViewProductsState extends State<ViewProducts> {
   @override
   Widget build(BuildContext context) {
 
-    Widget PokeSalmon()
+    Widget Ensalada()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderCart()),);
+            MaterialPageRoute(builder: (context) => ViewProductDetails()),);
         },
-        title: Text('Poke Salmon',
+        title: Text('Ensalada de nachos',
           style: TextStyle(
               fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('Salmon, suja duice, aguacate, pepino, edamame, zanahoria, alga wakame, ce...', style: TextStyle(
+          child: Text('Nachos de maiz con queso cheddar, ensalada de pico de galllo, pimientos ja...', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
         trailing: Image(
-            image: AssetImage('images/promo1.png'),),
+            image: AssetImage('images/ensalada_de_cos.png'),),
       );
     }
 
-    Widget PokePulpo()
+    Widget Empanadella_pistos()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderCart()),);
+            MaterialPageRoute(builder: (context) => ViewProductDetails()),);
         },
-        title: Text('Poke pulpo, salmon mostaza',
+        title: Text('Empanadillas de pisto 12cm',
           style: TextStyle(
               fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('Salmon, pulpo, majo mostaza, agucate, edamame, alga wakame, pepino, pina, ...', style: TextStyle(
+          child: Text('', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
         trailing: Image(
-          image: AssetImage('images/promo2.png'),),
+          image: AssetImage('images/empanadellas_pisto.png'),),
       );
     }
 
-    Widget PokePez()
+    Widget Empanadella_atun()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderCart()),);
+            MaterialPageRoute(builder: (context) => ViewProductDetails()),);
         },
-        title: Text('Poke pez mantequilla',
+        title: Text('Empanadillas de atun 12cm',
           style: TextStyle(
               fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: Text('Pez mantequilla trufado, soja, aguacate, edamame, algas wakame, pepino, zan...', style: TextStyle(
+          padding: const EdgeInsets.only(top:8.0),
+          child: Text('', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
         trailing: Image(
-          image: AssetImage('images/promo1.png'),),
+          image: AssetImage('images/empanadellas_atun.png'),),
       );
     }
 
-    Widget Pokeatun()
+    Widget Croquetes_Polo()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderCart()),);
+            MaterialPageRoute(builder: (context) => ViewProductDetails()),);
         },
-        title: Text('Poke atun',
+        title: Text('Croquetas de pollo, 4 Unidades',
           style: TextStyle(
               fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('Atun, salsa kimuchi picante, agucate, edamame, alga wakame, pepino, ceboi...', style: TextStyle(
+          child: Text('', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
         trailing: Image(
-          image: AssetImage('images/promo2.png'),),
+          image: AssetImage('images/croquetes_pollo.png'),),
       );
     }
 
-    Widget Pokegambus()
+    Widget Croquetes_Maiz()
     {
       return ListTile(
         onTap: ()
         {
           Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderCart()),);
+            MaterialPageRoute(builder: (context) => ViewProductDetails()),);
         },
-        title: Text('Poke gambas, huevo duro',
+        title: Text('Croquetas de maiz, 6 unidades',
           style: TextStyle(
               fontSize: 15.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
           ),
         ),
         subtitle: Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: Text('Gambas, heuvo duro, salsa cremosa, aguacate, edamame, pina, pepino, zan...', style: TextStyle(
+          child: Text('', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 13.0
           ),),
         ),
         trailing: Image(
-          image: AssetImage('images/promo1.png'),),
+          image: AssetImage('images/croquetes_maiz.png'),),
       );
     }
 
     return Scaffold(
-      backgroundColor: Colors.grey[-100],
+      backgroundColor: Colors.white,
       body: ListView(
-        padding: EdgeInsets.all(0),
         children: <Widget>[
 
           Stack(
             children: <Widget>[
-              Image(image: AssetImage('images/pokesalad.png'), fit: BoxFit.cover,),
+              Image(image: AssetImage('images/entrepanes.png'), fit: BoxFit.cover,),
               Positioned(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Icon(Icons.chevron_left, size: 30, color: Colors.white,),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12.0),
-                      child: Text('Crudo - Pokes & Salads', style: TextStyle(
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.arrow_back, size: 30, color: Colors.white,),
+                      Text('Entrepanes', style: TextStyle(
                         fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white,
                       ),),
-                    ),
-                  ],
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 190.0),
+                        child: Icon(Icons.search, size: 30, color: Colors.white,),
+                      ),
+
+                    ],
+                  ),
                 ),
-                bottom: 10,
+                bottom: 80,
               ),
             ],
           ),
-
-          SizedBox(height: 30,),
 
           SizedBox(height: 10,),
 
@@ -200,64 +204,84 @@ class _ViewProductsState extends State<ViewProducts> {
                       width: 100,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 225, 225, 225),
+                            color: AppColors.customGreyColor,
                             borderRadius: BorderRadius.circular(25)
                         ),
                         child: Center(
-                          child: Text('Pokes', style: TextStyle(
-                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          child: Text('Ensaladas', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: AppColors.themeColor,
                           ),),
                         ),
                       ),
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: SizedBox(
                       height: 40,
-                      width: 120,
+                      width: 100,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 225, 225, 225),
+                            color: AppColors.customGreyColor,
                             borderRadius: BorderRadius.circular(25)
                         ),
                         child: Center(
-                          child: Text('Crea tu poke bowl', style: TextStyle(
-                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
+                          child: Text('Mejicanos', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: AppColors.themeColor,
                           ),),
                         ),
                       ),
                     ),
                   ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: SizedBox(
+                      height: 40,
+                      width: 100,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: AppColors.customGreyColor,
+                            borderRadius: BorderRadius.circular(25)
+                        ),
+                        child: Center(
+                          child: Text('Pizzas', style: TextStyle(
+                            fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: AppColors.themeColor,
+                          ),),
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
           ),
 
-          //Promotions List
           Padding(
             padding: const EdgeInsets.only(top: 10.0, left: 20.0, bottom: 10.0),
             child: Text(
-              'Pokes', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w600, color: Colors.black, letterSpacing: 0.5
+              'Entrantes', style: TextStyle(
+                fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black, letterSpacing: 0.5
             ),
             ),
           ),
 
           Padding(
-            padding: EdgeInsets.only(left: 20.0, bottom: 10.0),
+            padding: EdgeInsets.only( bottom: 10.0),
             child: Divider(
               thickness: 1, height: 10,
               color: Colors.grey,
             ),
           ),
 
-          //Poke Salmon
+
           Column(
             children: <Widget>[
-              PokeSalmon(),
+              Ensalada(),
               Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -266,13 +290,6 @@ class _ViewProductsState extends State<ViewProducts> {
                     Text("‎€11.70", style: TextStyle(
                         fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
                     ),),
-
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Text('Popular', style: TextStyle(
-                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
-                      ),),
-                    ),
 
                   ],
                 ),
@@ -285,9 +302,9 @@ class _ViewProductsState extends State<ViewProducts> {
           //Poke pulpo, salmon mostaza
           Column(
             children: <Widget>[
-              PokePulpo(),
+              Empanadella_pistos(),
               Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top:0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -308,9 +325,9 @@ class _ViewProductsState extends State<ViewProducts> {
           //Poke pez
           Column(
             children: <Widget>[
-              PokePez(),
+              Empanadella_atun(),
               Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -331,9 +348,9 @@ class _ViewProductsState extends State<ViewProducts> {
           //Pokeatun
           Column(
             children: <Widget>[
-              Pokeatun(),
+              Croquetes_Polo(),
               Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -343,12 +360,6 @@ class _ViewProductsState extends State<ViewProducts> {
                         fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
                     ),),
 
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Text('Popular', style: TextStyle(
-                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
-                      ),),
-                    ),
 
                   ],
                 ),
@@ -361,9 +372,9 @@ class _ViewProductsState extends State<ViewProducts> {
           //Pokegambus
           Column(
             children: <Widget>[
-              Pokegambus(),
+              Croquetes_Maiz(),
               Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -380,82 +391,6 @@ class _ViewProductsState extends State<ViewProducts> {
           ),
 
           SizedBox(height: 10,),
-          //Poke pez
-          Column(
-            children: <Widget>[
-              PokePez(),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-
-                    Text("‎€11.70", style: TextStyle(
-                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
-                    ),),
-
-                  ],
-                ),
-              ),
-            ],
-          ),
-
-          SizedBox(height: 10,),
-
-          //Pokeatun
-          Column(
-            children: <Widget>[
-              Pokeatun(),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-
-                    Text("‎€11.70", style: TextStyle(
-                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
-                    ),),
-
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Text('Popular', style: TextStyle(
-                          fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.orange
-                      ),),
-                    ),
-
-                  ],
-                ),
-              ),
-            ],
-          ),
-
-          SizedBox(height: 10,),
-
-          //Pokegambus
-          Column(
-            children: <Widget>[
-              Pokegambus(),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-
-                    Text("‎€11.70", style: TextStyle(
-                        fontSize: 15.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.grey
-                    ),),
-
-                  ],
-                ),
-              ),
-            ],
-          ),
-
-          SizedBox(height: 20,),
-
 
 
         ],

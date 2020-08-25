@@ -81,6 +81,13 @@ flutter:
     - images/ic_user.png
     - images/entrepanes.png
     - images/rawcoco.png
+    - images/croquetes_maiz.png
+    - images/croquetes_pollo.png
+    - images/ensalada_de_cos.png
+    - images/empanadellas_atun.png
+    - images/empanadellas_pisto.png
+    - images/ic_cross.png
+    - images/ic_zoom.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

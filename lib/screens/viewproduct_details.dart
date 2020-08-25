@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodapp_ui/authentication/signup.dart';
-import 'package:foodapp_ui/screens/order_confirmation.dart';
+
+import 'CartScreens/cart_payment.dart';
+import 'Constants/constant.dart';
 
 class ViewProductDetails extends StatefulWidget {
   @override
@@ -14,144 +15,59 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.grey[-100],
+      backgroundColor: Colors.white,
       body: ListView(
-        padding: EdgeInsets.all(20),
         children: <Widget>[
 
-          SizedBox(height: 30,),
+          Stack(
+            children: <Widget>[
+              Image(image: AssetImage('images/entrepanes.png'), fit: BoxFit.cover,),
+              Positioned(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: (){
+                            Navigator.pop(context);
+                          },
+                          child: Image(image: AssetImage('images/ic_cross.png'),),
+                      ),
 
-          Align(
-              alignment: Alignment.topLeft,
-              child: GestureDetector(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: Icon(Icons.chevron_left, size: 30,)),
+                    ],
+                  ),
+                ),
+                bottom: 60,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 310.0, top: 90),
+                child: Image(image: AssetImage('images/ic_zoom.png'),),
+              ),
+            ],
           ),
 
-          SizedBox(height: 20,),
-
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Image(
-              image: AssetImage('images/product_view.png'),
-            )
-          ),
+          SizedBox(height: 10,),
 
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Paquete', style: TextStyle(
-                      fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.black,
-                    ),),
+                Text(
+                  'Ensalada de nachos', style: TextStyle(
+                  fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
+                ),),
 
-                    SizedBox(height: 05,),
-
-                    Text(
-                      'S/140.00', style: TextStyle(
-                      fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
-                    ),),
-
-                    SizedBox(height: 05,),
-
-                  ],
-                ),
-
-                Row(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 30,
-                      width: 70,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 241, 241, 241)
-                        ),
-                        child: Center(
-                          child: Icon(Icons.remove,),
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10,),
-                    SizedBox(
-                      height: 30,
-                      width: 70,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white
-                        ),
-                        child: Center(
-                          child: Icon(Icons.add,),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-
-              ],
-            ),
-          ),
-
-          //Tags
-          Padding(
-            padding: const EdgeInsets.only(right: 12.0, left: 12.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Card(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.red
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Center(
-                        child: Text('Recommended', style: TextStyle(
-                            fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                        ),),
-                      ),
-                    ),
-                  ),
-                ),
-
-                Card(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.orange
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Center(
-                        child: Text('Popular', style: TextStyle(
-                            fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                        ),),
-                      ),
-                    ),
-                  ),
-                ),
-
-                Card(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.blue
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Center(
-                        child: Text('New', style: TextStyle(
-                            fontSize: 10.0, fontWeight: FontWeight.normal, fontFamily: 'SFProDisplay', color: Colors.white
-                        ),),
-                      ),
-                    ),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 130.0),
+                  child: Text(
+                    '€10.70', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                  ),),
                 ),
 
               ],
@@ -159,36 +75,73 @@ class _ViewProductDetailsState extends State<ViewProductDetails> {
           ),
 
           Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Text(
-                '20 Unid. de Acevichado', style: TextStyle(
-                fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.black,
-              ),),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(8.0),
             child: Text(
-              '20 Unid. de Emperador', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.black,
+              'Nachos de maiz con queso cheddar, ensalada de pico de gallo, pimientos jalapenos, nata agria guacamole y salsa mejicana', style: TextStyle(
+              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w500, color: Colors.grey,
             ),),
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              '20 Unid. de Naruto Roll', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.black,
-            ),),
+          SizedBox(
+            height: 30,
+            width: 400,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: AppColors.customGreyColor
+              ),
+            ),
+          ),
+
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0, left: 100, right: 100, bottom: 15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Center(
+                    child: Icon(Icons.remove_circle_outline, color: AppColors.themeColor,),
+                  ),
+                  Text('1', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.black),),
+                  Center(
+                    child: Icon(Icons.add_circle_outline, color: AppColors.themeColor,),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          SizedBox(
+            height: 250,
+            width: 400,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: AppColors.customGreyColor
+              ),
+            ),
           ),
 
           Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              '20 Unid. de Shake Roll', style: TextStyle(
-              fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.black,
-            ),),
+            padding: const EdgeInsets.all(15.0),
+            child: Center(
+              child: SizedBox(
+                width: 400.0,
+                height: 50.0,
+                child: new RaisedButton(
+                  color: AppColors.themeColor,
+                  child: new Text('Add Item', style: TextStyle(
+                    fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.normal, color: Colors.white,
+                  ),),
+                  onPressed: ()
+                  {
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
+                  },
+                ),
+              ),
+            ),
           ),
+
           
         ],
       ),
