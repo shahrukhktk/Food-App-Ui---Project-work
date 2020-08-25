@@ -76,7 +76,11 @@ flutter:
     - images/emptycart.png
     - images/cash.png
     - images/stripe.png
+    - images/delivery_person.png
     - images/pokesalad.png
+    - images/ic_user.png
+    - images/entrepanes.png
+    - images/rawcoco.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

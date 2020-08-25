@@ -4,5 +4,7 @@ import 'package:flutter/material.dart';
 
 class  AppColors
 {
-  static Color themeColor = Color(0xFF00CCBB);
+  static Color themeColor = Colors.red;
+  static Color customGreyColor = Color(0xFFF5F5F5);
+
 }
