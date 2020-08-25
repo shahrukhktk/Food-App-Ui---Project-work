@@ -4,6 +4,7 @@ import 'package:foodapp_ui/authentication/signup.dart';
 import 'package:foodapp_ui/screens/order_confirmation.dart';
 
 import 'Constants/constant.dart';
+import 'ViewRestaurant.dart';
 
 class ShopList extends StatefulWidget {
   @override
@@ -14,60 +15,6 @@ class _ShopListState extends State<ShopList> {
 
   @override
   Widget build(BuildContext context) {
-
-    Widget BarrilFusion()
-    {
-      return ListTile(
-        onTap: ()
-        {
-          Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-        },
-        leading: Image(
-          image: AssetImage('images/barril.png'),
-        ),
-        title: Text('The Barril Fusion',
-          style: TextStyle(
-              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-          ),
-        ),
-        subtitle: Text('12pm - 7pm', style: TextStyle(
-            fontFamily: 'SFProDisplay', fontSize: 12.0
-        ),),
-        trailing: Text('Outstanding',
-          style: TextStyle(
-              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.amber
-          ),
-        ),
-      );
-    }
-
-    Widget ElManaDelivery()
-    {
-      return ListTile(
-        onTap: ()
-        {
-          Navigator.push(context,
-            MaterialPageRoute(builder: (context) => OrderConfirmation()),);
-        },
-        leading: Image(
-          image: AssetImage('images/elmana.png'),
-        ),
-        title: Text('El Mana - Delivery',
-          style: TextStyle(
-              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay'
-          ),
-        ),
-        subtitle: Text('12pm - 7pm', style: TextStyle(
-            fontFamily: 'SFProDisplay', fontSize: 12.0
-        ),),
-        trailing: Text('Outstanding',
-          style: TextStyle(
-              fontSize: 13.0, fontWeight: FontWeight.w600, fontFamily: 'SFProDisplay', color: Colors.amber
-          ),
-        ),
-      );
-    }
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -190,67 +137,73 @@ class _ShopListState extends State<ShopList> {
           ),
 
           //Entrpanes start
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Stack(
-              children: <Widget>[
-                Image(image: AssetImage('images/entrepanes.png'),),
-                Positioned(
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 230),
-                        child: SizedBox(
-                          height: 30,
-                          width: 100,
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(5)
-                            ),
-                            child: Center(
-                              child: Text('€1.90 delivery', style: TextStyle(
-                                fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
-                              ),),
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 230.0, top: 40.0, right: 20),
-                        child: SizedBox(
-                          height: 60,
-                          width: 120,
-                          child: Card(
-                            elevation: 1.5,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Text('Around', style: TextStyle(
-                                    fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
-                                  ),),
-
-                                  Text('35 min', style: TextStyle(
-                                    fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
-                                  ),),
-
-                                ],
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ViewRestaurant()),);
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Stack(
+                children: <Widget>[
+                  Image(image: AssetImage('images/entrepanes.png'),),
+                  Positioned(
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 230),
+                          child: SizedBox(
+                            height: 30,
+                            width: 100,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(5)
+                              ),
+                              child: Center(
+                                child: Text('€1.90 delivery', style: TextStyle(
+                                  fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black,
+                                ),),
                               ),
                             ),
                           ),
                         ),
-                      ),
 
-                    ],
-                  ),
-                )
-              ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 230.0, top: 40.0, right: 20),
+                          child: SizedBox(
+                            height: 60,
+                            width: 120,
+                            child: Card(
+                              elevation: 1.5,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text('Around', style: TextStyle(
+                                      fontFamily: 'SFProDisplay', fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey,
+                                    ),),
+
+                                    Text('35 min', style: TextStyle(
+                                      fontFamily: 'SFProDisplay', fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black,
+                                    ),),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
 

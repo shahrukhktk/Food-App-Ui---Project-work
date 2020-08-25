@@ -89,6 +89,10 @@ flutter:
     - images/ic_cross.png
     - images/ic_zoom.png
     - images/ensalada_header.png
+    - images/restaurant_header.png
+    - images/ic_goback.png
+    - images/ic_share.png
+    - images/ic_search.png
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 
