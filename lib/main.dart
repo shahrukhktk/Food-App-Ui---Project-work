@@ -15,5 +15,5 @@ void main() => runApp(new MaterialApp(
     fontFamily: "SFProDisplay",
   ),
   debugShowCheckedModeBanner: false,
-  home: ShopList(),
+  home: LoginScreen(),
 ));

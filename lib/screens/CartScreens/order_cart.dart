@@ -373,7 +373,7 @@ class _OrderCartsState extends State<OrderCart> {
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ShopList()),);
+                      MaterialPageRoute(builder: (context) => OrderConfirmation()),);
 //                    Navigator.push(context,
 //                      MaterialPageRoute(builder: (context) => CartPaymentScreen()),);
                   },
