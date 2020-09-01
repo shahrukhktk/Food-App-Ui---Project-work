@@ -131,6 +131,59 @@ class _ShopListState extends State<ShopList> {
 
           Padding(
             padding: const EdgeInsets.all(15.0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      Image(image: AssetImage('images/elmana.png'),)
+                    ],
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Image(image: AssetImage('images/barril.png'),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Image(image: AssetImage('images/elmana.png'),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Image(image: AssetImage('images/barril.png'),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Stack(
+                      children: <Widget>[
+                        Image(image: AssetImage('images/barril.png'),)
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(15.0),
             child: Text(
               '96 restaurants', style: TextStyle(
               fontFamily: 'SFProDisplay', fontSize: 15.0, fontWeight: FontWeight.bold, color: Colors.black,
